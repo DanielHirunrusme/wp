@@ -8,11 +8,11 @@
 
 4) In Terminal, run command: (This will install all of the development dependencies needed for the projects)
 	
-	- npm install
+	npm install
 	
 5) In Terminal, run command: (This will begin the tasks. Once you make a change to any sass or javascript file, it will recompile into the assets folder) 
 
-	- gulp
+	gulp
 	
 	
 	
