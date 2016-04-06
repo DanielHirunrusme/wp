@@ -1,0 +1,102 @@
+//global
+$g-size:13px;
+$g-laptop-size:11px;
+$g-phone-size:12px;
+$g-mobileonly-size:4vw;
+
+//breakpoints
+$break-desktop:1441px;
+$break-laptop:1440px;
+$break-ipad:1000px;
+$break-phone:767px;
+
+//animation
+$nav-transition-duration:1s;
+$transition-duration:.4s;
+$zoom-transition-duration:1.2s;
+$transition-timing-function: ease-out;
+$animation-speed: 0.2s;
+
+//gutters+margins
+$g-padding-v:10%;
+$g-padding-h:10%;
+
+$g-h-padding:5vw;
+$g-v-padding:4vh;
+
+//colors
+
+$c-white:#ffffff;
+$c-black:#000000; 
+$c-background:#ffffff;
+$c-background-search:#e5e5e5;
+$c-gray:#cccccc;
+$c-dark-gray:#1a1a1a;
+$c-orange:#BF6A49;
+$c-overlay-blue:#092647;
+$c-deactivated-text:#919191;
+$c-global:$c-white;
+
+//font sizes
+$f-global-size:1em;
+$f-tablet-size:1em;
+$f-mobileonly-size:3em;
+
+
+$f-name-mobileonly-size:7em;
+
+
+$p-font-sizes: (
+  null  : 12px,
+  $break-ipad : 12px,
+  $break-laptop : 12px,
+  $break-desktop: 13px
+);
+
+$p-line-height: (
+  null  : 16px,
+  $break-ipad : 16px,
+  $break-laptop : 16px,
+  $break-desktop: 18px
+);
+
+$h1-sizes: (
+  null  : 24px,
+  $break-ipad : 24px,
+  $break-laptop : 24px,
+  $break-desktop: 29px
+);
+
+$h1-line-height: (
+  null  : 30px,
+  $break-ipad : 30px,
+  $break-laptop : 30px,
+  $break-desktop: 35px
+);
+
+@mixin line-height($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      line-height: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-font-size;
+      }
+    }
+  }
+}
+
+//breakpoints
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.prev-next-arrows {
+	position:relative;
+	margin:0 auto;
+	margin-top:48px;
+	
+	a {
+		padding:1em .5em;
+	}
+}
+.line-arrow {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 12px; /*set the size for arrow*/
+    width: 1.5em;
+	height: 1.5em;
+    margin-top: -2em;
+    top: 50%;
+	right:0;
+	opacity:.5;
+}
+
+.line-arrow:hover {
+	opacity:1;
+}
+
+.line-arrow.right {
+  	border-top: 1px solid $c-black;
+	border-right: 1px solid $c-black;
+    transform: rotate(54deg) skew(20deg);
+    right: 20px;
+}
+
+.line-arrow.left {
+    border-top: 1px solid $c-black;
+	border-left: 1px solid $c-black;
+    transform: rotate(-54deg) skew(-20deg);
+    left: 0px;
+	right:auto;
+}

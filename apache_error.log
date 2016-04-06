@@ -1,0 +1,4 @@
+[Wed Apr 06 16:10:06 2016] [notice] Digest: generating secret for digest authentication ...
+[Wed Apr 06 16:10:06 2016] [notice] Digest: done
+[Wed Apr 06 16:10:06 2016] [notice] FastCGI: process manager initialized (pid 52638)
+[Wed Apr 06 16:10:06 2016] [notice] Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/7.0.0 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0 configured -- resuming normal operations

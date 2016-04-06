@@ -1,0 +1,189 @@
+.studio, .home, .post {
+	
+	
+	
+	
+	
+	.main-menu, .brand-menu {
+		color:#000;
+		
+		p, a, h1, h2, h3 {
+			color:#000;
+		}
+	}
+
+	
+	
+	
+	.content-wrapper{
+		width: 45.45455%; 
+		margin:0 auto;
+		left:21.25%;
+		
+		
+		color:#000;
+		text-shadow: none;
+	
+		h1, h2, h3, h4, h5, h6, p, a, select, input, label, textarea, span, time {
+			color:#000;
+		}
+		
+		.text {
+			margin-top:$g-v-padding;
+		}
+	}
+	
+}
+
+.animating.studio, .animating.post, .animating.projects {
+	.site-description, .studio-site-description {
+		@extend .span_4;
+		
+		
+		@include break('ipad') {
+			width:100%;
+			margin-left:$g-h-padding;
+		}
+		
+		a, p {
+			color:#000;
+		}
+	}
+}
+
+.studio, .post {
+	
+	.logo a {
+		@include opacity(1);
+		
+		@include break('ipad') {
+			@include transition(opacity $animation-speed);
+			@include opacity(0);
+			//color:#fff;
+			//display:none;
+		}
+	}
+	
+	.site-footer {
+		@include break('ipad') {
+			display:none;
+		}
+	}
+	
+	.brand-menu {
+		@include break('ipad') {
+			//display:none;
+			
+			.logo a {
+				@include opacity(0)
+			}
+		}
+	}
+	
+	
+	
+	.site-description, .studio-site-description {
+		@extend .span_2;
+		padding:0 !important;
+		
+		@include break('ipad') {
+			width:100%;
+			
+		}
+		
+		@extend %h1;
+		color:#000;
+		p, a, span {
+			@extend h1;
+			color:#000;
+			
+			
+		}
+	}
+	
+	 .studio-site-description {
+	 	@include break('ipad') {
+			display:block;
+			margin-left:$g-h-padding;
+			margin-bottom:3vw;
+		}
+	 }
+	
+	.studio-menu {
+		left:21.25%;
+		width:200px;
+		z-index:999999;
+		
+		
+		
+		
+		@include break('ipad') {
+			left:0;
+			width:75vw;
+			position:absolute;
+			z-index:9999;
+		}
+		
+		@include break('phone') {
+			width:100%;
+		}
+		
+		@include break('desktop') {
+			width:200px;
+		}
+	}
+	
+	.selected-press {
+		@include break('ipad') {
+			a {
+				@include opacity(.4);
+			}
+			
+			a.active {
+				@include opacity(1);
+			}
+		}
+	}
+	
+	.added-article {
+		.studio-menu {
+			left:140vw;
+			
+			@include break('ipad') {
+				left:105vw;
+			}
+			
+		}
+	}
+}
+
+.post-content {
+	margin-top:$g-v-padding;
+	left: 120px;
+	position:relative;
+	
+	@include break('ipad') {
+		display:none;
+	}
+	
+	a {
+		@extend h1;
+	}
+	
+	p {
+		@include transition($animation-speed opacity);
+		margin-bottom:4em;
+	}
+	
+	p.out {
+		@include opacity(.4);
+		
+		a {
+			@include opacity(1);
+		}
+	}
+	
+	p.out:hover {
+		@include opacity(1);
+	}
+}

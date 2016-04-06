@@ -1,0 +1,62 @@
+article {
+
+}
+
+article.js-Pjax-add {
+	//left:100%;
+	
+}
+
+
+
+
+
+
+.js-Pjax-remove {
+	a {
+		@extend .notrans;
+	}
+	
+	h1.site-description {
+		a {
+			@extend .notrans;
+		}
+	}
+}
+
+.inner-wrapper {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	overflow-y:scroll;
+	
+	@include break('ipad'){
+		overflow-y:visible;
+		position:absolute;
+	}
+}
+
+body.animating {
+	.inner-wrapper {
+		overflow-y:hidden;
+	}
+}
+
+.menu-open {
+	.inner-wrapper {
+		overflow-y:hidden;
+	}
+}
+
+content {
+	text-align:center;
+}
+
+
+.added-article {
+	.fade-in {
+		@include opacity(0);
+	}
+}
