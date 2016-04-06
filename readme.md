@@ -17,4 +17,4 @@
 	
 	
 	
-*** NOTE — you will need the contents folder (via Kirby) in order for the site to display correctly
+*** NOTE — you will need the contents folder (from the server) in order for the site to display all of the content
