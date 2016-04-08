@@ -2,3 +2,8 @@
 [Fri Apr 08 10:29:04 2016] [notice] Digest: done
 [Fri Apr 08 10:29:04 2016] [notice] FastCGI: process manager initialized (pid 65463)
 [Fri Apr 08 10:29:04 2016] [notice] Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/7.0.0 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0 configured -- resuming normal operations
+[Fri Apr 08 11:28:23 2016] [notice] caught SIGTERM, shutting down
+[Fri Apr 08 11:28:28 2016] [notice] Digest: generating secret for digest authentication ...
+[Fri Apr 08 11:28:28 2016] [notice] Digest: done
+[Fri Apr 08 11:28:28 2016] [notice] FastCGI: process manager initialized (pid 67001)
+[Fri Apr 08 11:28:28 2016] [notice] Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/7.0.0 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0 configured -- resuming normal operations

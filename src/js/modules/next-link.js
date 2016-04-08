@@ -26,7 +26,11 @@ module.exports = function( el ) {
 		
 		setScrollTarg();
 		
-		
+		if($('body').hasClass('projects')) {
+			$el.show();
+		} else {
+			$el.hide();
+		}
 		
 		if($('.bottom-arrow').length)
 		$targ.on('mousewheel scroll', scrollCheckOpacity);
@@ -62,8 +66,9 @@ module.exports = function( el ) {
 				$el.on('click', toNext);
 				$('body').removeClass('scrolling');
 				$window.off('mousewheel', stopToNext);
+				$window.trigger('resize');
 			});
-	
+	 
 			$('.bottom-arrow').addClass('off')
 			$('.projects-menu').removeClass('disable-link');
 			$('.main-menu').removeClass('disable-link');

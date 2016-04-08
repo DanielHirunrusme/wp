@@ -71,6 +71,7 @@ module.exports = function( el ) {
 			} else if($('.main-wrapper article:first-child').hasClass('projects-wrapper') && $targ.scrollTop() < $('.work.shown').height()/2) {
 				console.log('scrollTop ' + $targ.scrollTop())
 				$('.main-wrapper article:first-child').find('.project-information').hide();
+				//$('.main-wrapper').find('.bottom-arrow').hide();
 				//$('.main-wrapper article:last-child').find('.project-information').show().css('opacity', 1).css('right', 0);
 			}
 			
