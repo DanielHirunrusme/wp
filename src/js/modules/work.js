@@ -141,14 +141,14 @@ module.exports = function( el ) {
 				$targ = $('body');
 	  		  $el.find(".lazy").lazyload({
 	  		       effect : "fadeIn",
-	  			   threshold : $window.height()
+	  			   threshold : $window.height() * 4
 	  		   });
 			} else {
 				$targ = $('.main-wrapper .js-Pjax-add').length > 0 ? $('.main-wrapper .js-Pjax-add') : $( '.inner-wrapper' );
 	  		  $el.find(".lazy").lazyload({
 				  container: $targ,
 	  		       effect : "fadeIn",
-	  			   threshold : $window.height()
+	  			   threshold : $window.height() * 4
 	  		   });
 			}
 		}

@@ -152,11 +152,19 @@
 			margin-left:$g-h-padding;
 		}
 		
+		ul{
+			@include transition(margin $animation-speed)
+		}
+		
+		.hidden {
+			margin:0;
+		}
 		
 		&:hover, &.active {
 			
 			ul.featured + ul {
-				border-top:1px solid rgba(255, 255, 255, .5);
+				//border-top:1px solid rgba(255, 255, 255, .5);
+				//margin-top:3em; 
 			}
 			
 			
@@ -222,6 +230,9 @@
 		li.filtered.on {
 			@include opacity(1);
 			//display:block;
+			a {
+				@include opacity(1);
+			}
 		}
 		
 	}
@@ -257,7 +268,7 @@
 		
 		a {
 			text-transform:uppercase;
-			font-size:.9em;
+			//font-size:.9em;
 			letter-spacing:.1em !important;
 		}
 		
@@ -273,9 +284,10 @@
 	}
 	
 	ul.featured + ul {
-		margin-top:.5em;
-		padding-top:.5em;
-		border-top:1px solid rgba(255, 255, 255, 1);
+		//margin-top:.5em;
+		//padding-top:.5em;
+		//border-top:1px solid rgba(255, 255, 255, 1);
+		margin-top:2em; 
 	}
 	
 }

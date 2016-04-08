@@ -94,7 +94,8 @@
 	
 	
 		li ul {
-			@extend .trans;
+			//@extend .trans;
+			@include transition(opacity $animation-speed);
 			opacity:0;
 			background:transparent;
 			width:100%;

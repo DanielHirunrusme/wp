@@ -93,6 +93,13 @@ module.exports = function( el ) {
 			
 		}
 		
+		function setListSpacing() {
+			$('.project-list ul').each( function(){
+				if( $(this).find('li.on').length == 0 ) $(this).addClass('hidden')
+				else $(this).removeClass('hidden');
+			});
+		}
+		
 		//alert(getURLParameter('category'));
 		
 		function setCategory(num){
@@ -153,12 +160,20 @@ module.exports = function( el ) {
 				
 			});
 			
+			
+			//console.log( 'is visible' )
+			
+			//console.log( 'hidden length ' + $('.project-list li.on').length );
+			
+			setListSpacing(); 
+			
 			$('.project-list li').each(function(){
+				
 				if(!$(this).hasClass('on')) {
-					
 					$(this).stop().slideUp();
-				}
+				} 			
 			});
+			
 			
 			
 			if(!$('body').hasClass('project')) {
@@ -211,6 +226,8 @@ module.exports = function( el ) {
 			
 			if(!$(this).hasClass('on')) {
 				
+				
+				
 				if($(this).data('category') != 'all') {
 
 					setCategory( $(this).parent().index() )
@@ -228,11 +245,18 @@ module.exports = function( el ) {
 				
 					});
 					
+					
+					
+					
 					$('.categories').removeClass('filtered');
 					$('.categories .on').removeClass('on');
 					$(this).addClass('on');
-					$project_menu.find('li').removeClass('filtered on').stop().slideDown();
-				
+					console.log('slide down')
+					$('.project-list').removeClass('active').find('li').removeClass('filtered on').stop().slideDown();
+					
+					
+					$('.project-list ul').removeClass('hidden');
+					
 					if(!$('body').hasClass('project')) {
 						
 						$('.work').addClass('on').show().velocity({ 
@@ -244,7 +268,11 @@ module.exports = function( el ) {
 					}
 				}
 				
+				
+				
 				changeUrlParam( 'category', $(this).data('category') );
+				
+				
 				
 			} else {
 				// if category already selected then just scroll to top
@@ -256,6 +284,8 @@ module.exports = function( el ) {
 
 		});
 		 
+		 
+		setListSpacing(); 
 		
 		unique = false;
 		

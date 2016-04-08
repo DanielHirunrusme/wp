@@ -37,7 +37,7 @@ function browserifyTask( dev, cb ) {
 
   // Bundle all scripts from the modules folder
   b.require( getThemeModules() );
-  b.transform("stripify")
+  //b.transform("stripify")
   // Add minify plugin w/ source map options
   b.plugin( "minifyify", {
     map: outputFile + ".map",

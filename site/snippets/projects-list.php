@@ -42,7 +42,7 @@ endforeach;
 	  		endforeach;
 	  ?>
  
-      <div class="work <?php echo $matches; ?> <?php if($url_cat != 'all' && in_array($url_cat, $item_categories)) echo ' on';  ?>" data-module-init="work" data-work-id="<?php echo $project->num(); ?>" id="work-<?php echo $project->num()-1; ?>" data-title="<?php echo $project->title(); ?>">
+      <div class="work <?php echo $matches; ?> <?php if($url_cat != 'all' && in_array($url_cat, $item_categories)) echo ' on';  ?>" data-module-init="work" data-work-id="<?php echo $project->num(); ?>" id="work-<?php echo $project->num()-1; ?>" data-url="<?php echo $project->url(); ?>" data-title="<?php echo $project->title(); ?>">
 		  
 		  <?php
 		  	 
@@ -87,7 +87,7 @@ endforeach;
 	  		endforeach;
 	  ?>
  
-      <div class="work <?php echo $matches; ?> <?php if($url_cat != 'all' && in_array($url_cat, $item_categories)) echo ' on';  ?>" data-module-init="work" data-work-id="<?php echo $project->num(); ?>" id="work-<?php echo $project->num()-1; ?>" data-title="<?php echo $project->title(); ?>">
+      <div class="work <?php echo $matches; ?> <?php if($url_cat != 'all' && in_array($url_cat, $item_categories)) echo ' on';  ?>" data-module-init="work" data-work-id="<?php echo $project->num(); ?>" id="work-<?php echo $project->num()-1; ?>" data-url="<?php echo $project->url(); ?>" data-title="<?php echo $project->title(); ?>">
 		  
 		  <?php
 		  	 

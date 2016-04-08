@@ -23,17 +23,22 @@ module.exports = function( el ) {
 			
 			if($('body').hasClass('projects')) {
 				
+				$last_article = $('.main-wrapper article:last-child');
+				
 			 	$('.main-wrapper article:last-child').find('.work.on').each(function(){
+					
+					
 					
 					if($window.width() > settings.breakpoints.m) {
 				 		if($(this).position().top < $window.height()/2){ 
-							$('.main-wrapper article:last-child').find('.project-information h1').text($(this).data('title'));
-							$('.main-wrapper article:last-child').find('.projects-menu nav a').removeClass('selected');
+							$last_article.find('.project-information h1').text($(this).data('title'));
+							$last_article.find('.projects-menu nav a').removeClass('selected');
 							//console.log($(this).index());
-					
-							$('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()).find('a').addClass('selected');
-							$('.main-wrapper article:last-child').find('.project-information a').attr("href", $('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()-1).find('a').attr('href'));
-							//$('.project-information a').data("num", $('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()-1).data('num'));
+							$last_article.find('.project-information a').attr("href", $(this).data('url')); 
+							$last_article.find('.projects-menu nav li').eq($(this).index()).find('a').addClass('selected');
+							//$('.main-wrapper article:last-child').find('.project-information a').attr("href", $('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()).find('a').attr('href'));
+							
+							
 							
 							$('.main-wrapper article:last-child').attr('data-work-num', $('.projects-menu nav li').eq($(this).index()-1).data('num'));
 							$('.main-wrapper article:last-child').find('.project-information a').attr('data-work-num', $('.projects-menu nav li').eq($(this).index()-1).data('num'));
@@ -41,10 +46,10 @@ module.exports = function( el ) {
 					} else {
 						if($window.width() > settings.breakpoints.m) {
 					 		if($(this).position().top < $window.height()/4){ 
-								$('.main-wrapper article:last-child').find('.project-information h1').text($(this).data('title'));
-								$('.main-wrapper article:last-child').find('.projects-menu nav a').removeClass('selected');
+								$last_article.find('.project-information h1').text($(this).data('title'));
+								$last_article.find('.projects-menu nav a').removeClass('selected');
 								//console.log($(this).index());
-					
+								$last_article.find('.project-information a').attr("href", $(this).data('url')); 
 								$('.projects-menu nav li').eq($(this).index()).find('a').addClass('selected');
 					
 								$('.project-information a').attr("href", $('.projects-menu nav li').eq($(this).index()).find('a').attr('href'));
@@ -53,14 +58,14 @@ module.exports = function( el ) {
 					 		}
 						} else {
 					 		if($('body').scrollTop() > $(this).position().top - $window.height()/2){ 
-								$('.main-wrapper article:last-child').find('.project-information h1').text($(this).data('title'));
-								$('.main-wrapper article:last-child').find('.projects-menu nav a').removeClass('selected');
+								$last_article.find('.project-information h1').text($(this).data('title'));
+								$last_article.find('.projects-menu nav a').removeClass('selected');
 								//console.log($(this).index());
-					
+								$last_article.find('.project-information a').attr("href", $(this).data('url')); 
 								$('.projects-menu nav li').eq($(this).index()).find('a').addClass('selected');
-								$('.main-wrapper article:last-child').find('.project-information a').data("num", 222);
-								$('.main-wrapper article:last-child').find('.project-information a').attr('data-work-num', $('.projects-menu nav li').eq($(this).index()-1).data('num'));
-								$('.main-wrapper article:last-child').find('.project-information a').attr("href", $('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()-1).find('a').attr('href'));
+								$last_article.find('.project-information a').data("num", 222);
+								$last_article.find('.project-information a').attr('data-work-num', $('.projects-menu nav li').eq($(this).index()-1).data('num'));
+								//$('.main-wrapper article:last-child').find('.project-information a').attr("href", $('.main-wrapper article:last-child').find('.projects-menu nav li').eq($(this).index()).find('a').attr('href'));
 					 		}
 						}
 					}

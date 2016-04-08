@@ -53,13 +53,15 @@ module.exports = function( el ) {
 				
 				//scrolling down
 				if(e.deltaY > 0) {
+					var dest_top = $el.position().top + e.deltaY < pad ? $el.position().top + e.deltaY : pad;
 					
-					var dest_top = $el.position().top - e.deltaY > $window.height() - $el.height() - pad ? $el.position().top - e.deltaY : $window.height() - $el.height() - pad;
 					$el.css('top', dest_top)
 					settings.scrollPos = dest_top;
+					
 				}else{
 					//var dest_top = $el.position().top > $window.height() - $el.height() ? $el.position().top + e.deltaY : $window.height() - $el.height() - 1;
-					var dest_top = $el.position().top - e.deltaY < pad ? $el.position().top - e.deltaY : pad;
+					var dest_top = $el.position().top + e.deltaY > $window.height() - $el.height() - pad ? $el.position().top + e.deltaY : $window.height() - $el.height() - pad;
+					
 					$el.css('top', dest_top)
 					settings.scrollPos = dest_top;
 					

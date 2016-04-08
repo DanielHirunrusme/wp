@@ -28,10 +28,11 @@ fields:
       creative_direction: Creative Direction
       digital: Digital
       identity: Identity
-      exhibition: Exhibition
+      curation: Curation
       environmental: Environmental
       packaging: Packaging
       print: Print
+	  product: Product
       video: Video
   text:
     label: Description

@@ -45,11 +45,13 @@ $menu_list_title = $page->template() != 'projects' ? $page->parent()->title() : 
 	  
 	  <ul class="featured">
   	    <?php foreach($sorted['featured'] as $item): ?>
+				
+			
   		<?php $item_categories = []; ?>
   			<?php foreach($item->categories()->split() as $category): ?>
   				<?php $item_categories[] = $category; ?>	
   			<?php endforeach; ?>
-  	    <li data-num="<?php echo $item->num(); ?>" class="featured" <?php if($url_cat != 'all' && !in_array($url_cat, $item_categories)) echo 'style="display:none;"';  ?>><a  data-categories="<?php foreach($item_categories as $category): echo $category.','; endforeach; ?>" data-preview="<?php if($item->images()->count() > 0 ) echo $item->images()->sortBy('sort', 'asc')->first()->url(); ?>" class="<?php ecco($item->isOpen(), 'active') ?> <?php if(!$item->isOpen()): ?> pjax <?php endif; ?>" href="<?php echo $item->url().'?category='.$url_cat ?>"><?php echo html($item->title()) ?></a></li>
+  	    <li class="<?php if($url_cat == 'all' || in_array($url_cat, $item_categories)) echo 'on';  ?>" data-num="<?php echo $item->num(); ?>" class="featured" <?php if($url_cat != 'all' && !in_array($url_cat, $item_categories)) echo 'style="display:none;"';  ?>><a  data-categories="<?php foreach($item_categories as $category): echo $category.','; endforeach; ?>" data-preview="<?php if($item->images()->count() > 0 ) echo $item->images()->sortBy('sort', 'asc')->first()->url(); ?>" class="<?php ecco($item->isOpen(), 'active') ?> <?php if(!$item->isOpen()): ?> pjax <?php endif; ?>" href="<?php echo $item->url().'?category='.$url_cat ?>"><?php echo html($item->title()) ?></a></li>
   	    <?php endforeach ?>
 	  </ul>
 	  <ul>
@@ -58,7 +60,7 @@ $menu_list_title = $page->template() != 'projects' ? $page->parent()->title() : 
 			<?php foreach($item->categories()->split() as $category): ?>
 				<?php $item_categories[] = $category; ?>	
 			<?php endforeach; ?>
-	    <li data-num="<?php echo $item->num(); ?>" <?php if($url_cat != 'all' && !in_array($url_cat, $item_categories)) echo 'style="display:none;"';  ?>><a  data-categories="<?php foreach($item_categories as $category): echo $category.','; endforeach; ?>" data-preview="<?php if($item->images()->count() > 0 ) echo $item->images()->sortBy('sort', 'asc')->first()->url(); ?>" class="<?php ecco($item->isOpen(), 'active') ?> <?php if(!$item->isOpen()): ?> pjax <?php endif; ?>" href="<?php echo $item->url().'?category='.$url_cat ?>"><?php echo html($item->title()) ?></a></li>
+	    <li class="<?php if($url_cat == 'all' || in_array($url_cat, $item_categories)) echo 'on';  ?>" data-num="<?php echo $item->num(); ?>" <?php if($url_cat != 'all' && !in_array($url_cat, $item_categories)) echo 'style="display:none;"';  ?>><a  data-categories="<?php foreach($item_categories as $category): echo $category.','; endforeach; ?>" data-preview="<?php if($item->images()->count() > 0 ) echo $item->images()->sortBy('sort', 'asc')->first()->url(); ?>" class="<?php ecco($item->isOpen(), 'active') ?> <?php if(!$item->isOpen()): ?> pjax <?php endif; ?>" href="<?php echo $item->url().'?category='.$url_cat ?>"><?php echo html($item->title()) ?></a></li>
 	    <?php endforeach ?>
 	  </ul>
 	</nav>
@@ -69,7 +71,7 @@ $menu_list_title = $page->template() != 'projects' ? $page->parent()->title() : 
 	<!-- categories -->
 	<nav class="categories" data-module-init="nav-category-filter">
 		<ul>
-			<li><a href="#" class="on" data-category="all">All</a></li>
+			<li><a href="#" class="<?php if($url_cat == '' || $url_cat == 'all'):?>on<?php endif; ?>" data-category="all">All</a></li>
 		<?php
 	
 		$categories = [];
