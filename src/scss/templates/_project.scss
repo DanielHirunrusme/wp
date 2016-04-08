@@ -464,14 +464,14 @@
 
 
 i.arrow {
-	top: 2pt;
+	top: 0pt;
     display: inline-block;
     font-style: normal;
     position: relative;
-    width: 1.5em;
-    height: 1.5em;
-    border-right: 0.3em solid #fff;
-    border-top: 0.3em solid #fff;
+    width: 1.6em;
+    height: 1.6em;
+    border-right: 0.1em solid #fff;
+    border-top: 0.1em solid #fff;
     -webkit-transform: rotate(45deg);
     transform: rotate(-45deg);
 }
